@@ -73,6 +73,22 @@ nav {
   margin-bottom: 0.4em;    /* theme: 0 — add space before tagline */
 }
 
+@media only screen and (max-width: 1024px) {
+  .logo-name { font-size: 6em; }
+}
+
+@media only screen and (max-width: 768px) {
+  .logo-name { font-size: 4.5em; }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo-name { font-size: 3.2em; }
+}
+
+@media only screen and (max-width: 321px) {
+  .logo-name { font-size: 2.6em; }
+}
+
 /* ================================================================
    BUTTONS — reset theme's clunky top:-5px jump effect on both types
    ================================================================ */
