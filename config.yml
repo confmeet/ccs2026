@@ -1,5 +1,5 @@
 baseurl: "https://confmeet.github.io/ccs2026/"
-title: "2026 NSF CSSI / CyberTraining / SCIPE PI Meeting"
+title: "2026 NSF CSSI / Cyber Training / SCIPE PI Meeting"
 canonifyurls: true
 theme: "hugo-conference"
 
@@ -8,7 +8,7 @@ disableKinds:
   - term
 
 params:
-  Name: "2026 NSF CSSI / CyberTraining / SCIPE PI Meeting"
+  Name: "2026 NSF CSSI / Cyber Training / SCIPE PI Meeting"
   Description: "Annual PI meeting for the NSF CSSI, CyberTraining, and SCIPE programs."
   Date: "Sept. 13 - 15, 2026"
   Venue: "Bethesda North Marriott Hotel & Conference Center"
