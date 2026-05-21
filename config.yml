@@ -1,0 +1,160 @@
+baseurl: "https://confmeet.github.io/ccs2026/"
+title: "2026 NSF CSSI / CyberTraining / SCIPE PI Meeting"
+canonifyurls: true
+theme: "hugo-conference"
+
+disableKinds:
+  - taxonomy
+  - term
+
+params:
+  Name: "2026 NSF CSSI / CyberTraining / SCIPE PI Meeting"
+  Description: "Annual PI meeting for the NSF CSSI, CyberTraining, and SCIPE programs."
+  Date: "Sept. 13 - 15, 2026"
+  Venue: "Bethesda North Marriott Hotel & Conference Center"
+  Address: "5701 Marinelli Road"
+  City: "Rockville"
+  State: "MD"
+  Images: ["/img/badge.jpg"]
+  GoogleMapsKey: "AIzaSyDGEz9K7S1Dj9RdZk1UT44s4R9iWj1yB7k"
+
+  Sections:
+    - about
+    - speakers
+    - schedule
+    - registration
+    - posters
+    - location
+    - childcare
+
+  Titles:
+    about: "About"
+    speakers: "Speakers"
+    schedule: "Program"
+    registration: "Registration"
+    posters: "Posters"
+    location: "Venue & Travel"
+    childcare: "Childcare"
+
+  CallToAction:
+    text: "Register"
+    link: "https://TBD"
+
+  # About section body (supports Markdown)
+  About:
+    body: |
+      The annual NSF CSSI, CyberTraining, and SCIPE PI Meeting brings together principal investigators and senior personnel funded under these programs to share progress, exchange ideas, and build community across the cyberinfrastructure research ecosystem.
+
+  # Registration details
+  Registration:
+    deadline: "TBD"
+    information: "Registration is open to NSF CSSI, CyberTraining, and SCIPE PIs, co-PIs and senior personnel. Each project or collaborative project is only required to be represented by just one person. Exceptions should be discussed with the cognizant NSF program manager."
+    instructions: "Register here."
+
+  # Poster session details
+  PosterSession:
+    description: "All projects or collaborative projects must be represented with a poster."
+    instructions:
+      title_abstract: "Poster titles and abstracts must be submitted during registration. The registration links on this site will take you to a form and contain instructions for submitting titles and abstracts for a variety of situations."
+      configuration: "Posters should be no larger than 3ft (vertically) by 3ft (horizontally), and should be thin and light enough to be pierced by a tack and affixed to a cork board. Cork boards and tacks will be provided."
+      printing: "Presenters should print their posters and bring them to the conference, or print them at a local vendor in time for the conference. We will not provide a list of local print vendors."
+      example_CI_text: "is an example poster from a CyberInfrastructure project."
+      example_CI_link: "https://doi.org/10.6084/m9.figshare.26801080.v1"
+      example_CSSI_text: "is an example poster from a CSSI project." 
+      example_CSSI_link: "https://doi.org/10.6084/m9.figshare.24107424.v1"
+      archiving: "In addition to printing and presenting a physical poster, you must archive a digitial version of your poster on FigShare and share your DOI with us. Instructions for doing so are available in the "
+      submission_link: "https://TBD"
+    deadline: "TBD"
+    sessions: ""
+
+
+  # Venue & Travel details
+  Location:
+    hotel:
+      name: "Bethesda North Marriott Hotel & Conference Center"
+      url: "https://www.marriott.com/en-us/hotels/wasbn-bethesda-north-marriott-hotel-and-conference-center"
+      booking_link: "https://TBD"
+      booking_deadline: "TBD"
+      rate: "TBD per night"
+      notes: "A room block has been reserved for conference attendees at a discounted rate. To take advantage of the rate use"
+    travel: |
+      **By Air:** The nearest airports are Ronald Reagan Washington National Airport (~20 miles) and Washington Dulles International Airport (~25 miles).
+
+      **By Metro:** Take the Red Line to the North Bethesda Station. The hotel is approximately a 5-minute walk from the station exit.
+  # Childcare details
+  Childcare:
+    description: "Childcare services will be available for registered attendees with young children. Please contact the organizers to arrange childcare."
+    contact: "TBD"
+    deadline: "TBD"
+
+  # Multi-day program — add/remove Day blocks as needed.
+  # Each Day has a name and its own schedule array.
+  # Entries with a `presentation` key appear in both the Speakers and Program sections.
+  Days:
+    - name: "Sunday, Sept. 13"
+      schedule:
+        - name: "Welcome Reception"
+          description: "Please join us in ... for a welcome reception. Hors d'oeuvres will be served."
+          time: "6:00pm"
+    - name: "Monday, Sept. 14"
+      schedule:
+        - name: "Registration & Breakfast"
+          description: "Please join us in ... to register and have breakfast."
+          time: "8:00am"
+        - name: "Prof. Neeraj Rai" 
+          photo: "/img/speakers/neeraj-rai.jpg"
+          bio: "Neeraj Rai is the Ergon, Inc. Distinguished Professor in the Dave C. Swalm School of Chemical Engineering and a researcher with the High Performance Computing Collaboratory at Mississippi State University. Prof. Rai’s work focuses on bridging discipline-specific engineering knowledge with modern data science, artificial intelligence, and high-performance computing infrastructure."
+          company: "Mississippi State University"
+          link:
+            href: "https://www.che.msstate.edu/people/faculty/neeraj-rai/"
+            text: "(Website)"
+          presentation:
+            title: "Opening Remarks"
+            description: "Prof. Rai will deliver opening remarks in ..."
+            time: "8:45am"
+        - name: "Keynote I"
+          time: "9:00am"
+        - name: "Keynote II"
+          time: "9:30am"
+        - name: "Coffee Break"
+          time: "10:00am"
+        - name: "Poster Session I" 
+          time: "10:15am"
+        - name: "Lunch"
+          time: "11:45am"
+        - name: "Poster Session II" 
+          time: "1:00pm"
+        - name: "Coffee Break"
+          time: "2:30pm"
+        - name: "Breakout Sessions"
+          time: "2:45pm"
+        - name: "Coffee Break" 
+          time: "4:15pm"
+        - name: "Poster Session III & Reception" 
+          time: "4:30pm"
+
+    - name: "Tuesday, Sept. 15"
+      schedule:
+        - name: "Registration & Breakfast"
+          time: "8:00am"
+        - name: "Keynote III"
+          time: "9:00am"
+        - name: "Breakout Report Outs"
+          time: "9:30am" 
+        - name: "Coffee Break" 
+          time: "10:00am"
+        - name: "Poster Session IV"
+          time: "10:15am" 
+        - name: "Prof. Alan Sussman"
+          photo: "/img/speakers/alan-sussman.jpg"
+          bio: "Alan Sussman is a Professor in the Department of Computer Science at the University of Maryland, College Park, where he also serves as the Associate Chair for Undergraduate Education. He previously served as a Program Director at the NSF within the CISE Directorate. He focuses on parallel and distributed systems, high-performance computing, and computer science education."
+          company: "University of Maryland, College Park"
+          link:
+            href: "https://www.cs.umd.edu/~als/"
+            text: "(Website)"
+          presentation:
+            title: "Closing Remarks"
+            description: "Prof. Sussman will deliver closing remarks in ..."
+            time: "12:15pm"
+        - name: "Lunch"
+          time: "12:30pm"

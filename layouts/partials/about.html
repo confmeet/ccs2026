@@ -1,0 +1,6 @@
+<h2 class="section-title">{{ .titles.about }}</h2>
+
+
+{{ with .about }}
+  <p>{{ .body | markdownify }}</p>
+{{ end }}

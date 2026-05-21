@@ -1,0 +1,30 @@
+<h2 class="section-title">{{ .titles.location }}</h2>
+
+<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+  <a href="{{ .location.hotel.url }}" target="_blank">{{ .venue }}</strong></a><br>
+  <span itemprop="streetAddress">{{ .address }}</span>,
+  <span itemprop="addressLocality">{{ .city }}</span>,
+  <span itemprop="addressRegion">{{ .state }}</span>
+</p>
+
+<div id="map-canvas" class="location-area" data-address="{{ .address }}, {{ .city }} - {{ .state }}"></div>
+
+{{ with .location }}
+
+  {{ with .hotel }}
+  <h3 class="location-subtitle">Room Block</h3>
+
+  <p>{{ .notes }} <a href="{{ .booking_link }}">this booking link.</a></p>
+  <ul>
+    {{ with .rate }}<li><strong>Group rate:</strong> {{ . }}</li>{{ end }}
+    {{ with .booking_deadline }}<li><strong>Booking deadline:</strong> {{ . }}</li>{{ end }}
+  </ul>
+  {{ end }}
+
+
+  {{ with .travel }}
+  <h3 class="location-subtitle">Getting There</h3>
+  <div class="location-travel">{{ . | markdownify }}</div>
+  {{ end }}
+
+{{ end }}

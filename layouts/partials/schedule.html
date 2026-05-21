@@ -1,0 +1,38 @@
+<h2 class="section-title">{{ .titles.schedule }}</h2>
+
+<div class="schedule-tbl">
+  <table>
+    <thead>
+      <tr>
+        <th class="schedule-time">Time</th>
+        <th class="schedule-slot">Event</th>
+        <th class="schedule-description">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range .days }}
+        <tr class="schedule-day">
+          <td colspan="3">{{ .name }}</td>
+        </tr>
+        {{ range $slot := .schedule }}
+          {{ if ne .presentation nil }}
+            <tr>
+              <td class="schedule-time">{{ .presentation.time }}</td>
+              <td class="schedule-slot">
+                {{ .presentation.title }} by {{ .name }}
+                <span class="speakers-company">{{ .company }}</span>
+              </td>
+              <td class="schedule-description">{{ .presentation.description }}</td>
+            </tr>
+          {{ else }}
+            <tr class="schedule-other">
+              <td class="schedule-time">{{ .time }}</td>
+              <td class="schedule-slot">{{ .name }}</td>
+              <td class="schedule-description">{{ .description | default "-" }}</td>
+            </tr>
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </tbody>
+  </table>
+</div>

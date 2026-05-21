@@ -1,0 +1,28 @@
+<h2 class="section-title">{{ .titles.posters }}</h2>
+
+{{ with .postersession }}
+<p>{{ .description }}</p>
+
+{{ with.instructions }}
+<ul>
+  {{ with .title_abstract }}<li><strong>Poster Titles and Abstracts:</strong> {{ . }}</li>{{ end }}
+  {{ with .configuration }}<li><strong>Configuration:</strong> {{ . }}</li>{{ end }}
+  <li><strong>Examples:</strong> 
+    <a href="{{ .example_CI_link }}" target="_blank">Here</a> {{ .example_CI_text }}
+    <a href="{{ .example_CSSI_link }}" target="_blank">Here</a> {{ .example_CSSI_text }}
+  </li>
+  <li>
+    <strong>Digital Archiving:</strong>
+    {{ .archiving }}<a href="{{ .submission_link }}" target="_blank">DOI submission form.</a>
+  </li>
+</ul>
+{{end}}
+
+{{ with .deadline }}<p><strong>Submission deadline:</strong> {{ . }}</p>{{ end }}
+
+{{ with .submission_link }}
+<p>
+  <a href="{{ . }}" target="_blank" class="btn">Submit Your Poster</a>
+</p>
+{{ end }}
+{{ end }}
