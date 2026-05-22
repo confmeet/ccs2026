@@ -25,7 +25,6 @@ params:
     - registration
     - posters
     - location
-    - childcare
 
   Titles:
     about: "About"
@@ -34,7 +33,6 @@ params:
     registration: "Registration"
     posters: "Posters"
     location: "Venue & Travel"
-    childcare: "Childcare"
 
   CallToAction:
     text: "Register"
@@ -48,7 +46,7 @@ params:
   # Registration details
   Registration:
     deadline: "TBD"
-    information: "Registration is open to NSF CSSI, CyberTraining, and SCIPE PIs, co-PIs and senior personnel. Each project or collaborative project is only required to be represented by just one person. Exceptions should be discussed with the cognizant NSF program manager."
+    information: "Registration is open to NSF CSSI, CyberTraining, and SCIPE PIs, co-PIs and senior personnel. Each project or collaborative project is only required to be represented by just one person. Exceptions should be discussed with the cognizant NSF program manager. A representative of a project under No Cost Extension is encouraged to join, but not required."
     instructions: "Register here."
 
   # Poster session details
