@@ -65,6 +65,10 @@ nav {
   text-shadow: none;
 }
 
+.tagline {
+  font-size: 3em;   /* theme: 2em — bump up for visibility */
+}
+
 .logo-name {
   font-size: 8em;          /* theme: 10em — slightly smaller for long titles */
   font-weight: 300;        /* Inter Light — slim strokes */
