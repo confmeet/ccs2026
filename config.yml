@@ -29,7 +29,7 @@ params:
   Titles:
     about: "About"
     speakers: "Speakers"
-    schedule: "Program"
+    schedule: "Program (Tentative)"
     registration: "Registration"
     posters: "Posters"
     location: "Venue & Travel"
