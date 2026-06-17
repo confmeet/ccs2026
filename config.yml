@@ -35,7 +35,7 @@ params:
     location: "Venue & Travel"
 
   CallToAction:
-    text: "Register"
+    text: "Register (COMING SOON)"
     link: "https://TBD"
 
   # About section body (supports Markdown)
@@ -47,7 +47,7 @@ params:
   Registration:
     deadline: "TBD"
     information: "Registration is open to NSF CSSI, CyberTraining, and SCIPE PIs, co-PIs and senior personnel. Each project or collaborative project is only required to be represented by just one person. Exceptions should be discussed with the cognizant NSF program manager. A representative of a project under No Cost Extension is encouraged to join, but not required."
-    instructions: "Register here."
+    instructions: "Register here (COMING SOON)."
 
   # Poster session details
   PosterSession:
