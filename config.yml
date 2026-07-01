@@ -76,9 +76,9 @@ params:
       rate: "TBD per night"
       notes: "A room block has been reserved for conference attendees at a discounted rate. To take advantage of the rate use"
     travel: |
-      **By Air:** The nearest airports are Ronald Reagan Washington National Airport (~20 miles) and Washington Dulles International Airport (~25 miles).
+      **By Air:** The nearest airports are Ronald Reagan Washington National Airport (~20 miles), Washington Dulles International Airport (~25 miles), and Baltimore/Washington International (~35 miles).
 
-      **By Metro:** Take the Red Line to the North Bethesda Station. The hotel is approximately a 5-minute walk from the station exit.
+      **By Metro from Downtown DC:** Take the Red Line to the North Bethesda Station. The hotel is approximately a 5-minute walk from the station exit.
   # Childcare details
   Childcare:
     description: "Childcare services will be available for registered attendees with young children. Please contact the organizers to arrange childcare."
