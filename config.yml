@@ -45,7 +45,7 @@ params:
 
   # Registration details
   Registration:
-    deadline: "TBD"
+    deadline: "August 20, 2026"
     information: "Registration is open to NSF CSSI, CyberTraining, and SCIPE PIs, co-PIs and senior personnel. Each project or collaborative project is only required to be represented by just one person. Exceptions should be discussed with the cognizant NSF program manager. A representative of a project under No Cost Extension is encouraged to join, but not required."
     instructions: "Register here (COMING SOON)."
 
@@ -71,9 +71,9 @@ params:
     hotel:
       name: "Bethesda North Marriott Hotel & Conference Center"
       url: "https://www.marriott.com/en-us/hotels/wasbn-bethesda-north-marriott-hotel-and-conference-center"
-      booking_link: "https://TBD"
-      booking_deadline: "TBD"
-      rate: "TBD per night"
+      booking_link: "https://book.passkey.com/e/51306602"
+      booking_deadline: "August 20, 2026"
+      rate: "249.00 per night plus taxes and fees"
       notes: "A room block has been reserved for conference attendees at a discounted rate. To take advantage of the rate use"
     travel: |
       **By Air:** The nearest airports are Ronald Reagan Washington National Airport (~20 miles), Washington Dulles International Airport (~25 miles), and Baltimore/Washington International (~35 miles).
