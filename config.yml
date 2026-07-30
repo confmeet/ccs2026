@@ -35,8 +35,8 @@ params:
     location: "Venue & Travel"
 
   CallToAction:
-    text: "Register (COMING SOON)"
-    link: "https://TBD"
+    text: "Register"
+    link: "https://www.cavs.msstate.edu/conferences/2026NSFCyberPI/register/"
 
   # About section body (supports Markdown)
   About:
@@ -47,7 +47,7 @@ params:
   Registration:
     deadline: "August 20, 2026"
     information: "Registration is open to NSF CSSI, CyberTraining, and SCIPE PIs, co-PIs and senior personnel. Each project or collaborative project is only required to be represented by just one person. Exceptions should be discussed with the cognizant NSF program manager. A representative of a project under No Cost Extension is encouraged to join, but not required."
-    instructions: "Register here (COMING SOON)."
+    instructions: "Register here."
 
   # Poster session details
   PosterSession:
