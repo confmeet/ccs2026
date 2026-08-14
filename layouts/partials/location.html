@@ -1,5 +1,6 @@
 <h2 class="section-title">{{ .titles.location }}</h2>
 
+<h3 class="location-subtitle" style="margin-top:0em">Address</h3>
 <p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
   <a href="{{ .location.hotel.url }}" target="_blank">{{ .venue }}</strong></a><br>
   <span itemprop="streetAddress">{{ .address }}</span>,
@@ -10,7 +11,7 @@
 {{ with .location }}
 
   {{ with .hotel }}
-  <h3 class="location-subtitle">Room Block</h3>
+  <h3 class="location-subtitle" >Room Block</h3>
 
   <p>{{ .notes }} <a href="{{ .booking_link }}">this booking link.</a></p>
   <ul>
