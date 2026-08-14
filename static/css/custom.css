@@ -160,6 +160,23 @@ nav {
   text-decoration: underline;
 }
 
+/* Header CTA area — space the Register / View My Assignments pills
+   and let them wrap onto separate lines on narrow screens */
+.call-action-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;   /* theme centers the header via text-align */
+  gap: 12px;
+}
+
+@media only screen and (max-width: 480px) {
+  .call-action-area .call-action-link {
+    padding: 9px 18px;
+    font-size: 1.4em;
+  }
+}
+
 /* ================================================================
    CONTENT LISTS — theme's 10px base + missing li font-size makes them tiny;
    the * reset also strips list-style, so restore bullets/numbers here
@@ -281,6 +298,99 @@ nav {
 }
 
 /* ================================================================
+   ASSIGNMENTS PAGE
+   (.assignments-tbl also carries .schedule-tbl so it inherits
+    the schedule table's chrome, including its dark-mode rules)
+   ================================================================ */
+.assignments-back,
+.assignments-intro,
+.assignments-updated {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  margin-bottom: 1em;
+}
+
+.assignments-updated {
+  margin-top: 1em;
+  color: #6c757d;
+}
+
+/* Selector must out-specify the theme's `input[type="search"]` rule,
+   which forces content-box and would break the 100% width */
+input[type="search"].assignments-search {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  font-size: 1.6em;      /* match paragraph text */
+  padding: 21px 22px;    /* px, so the box keeps its size despite the smaller text */
+  margin-bottom: 0;
+  color: #37474f;
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+}
+
+input[type="search"].assignments-search:focus {
+  outline: none;
+  border-color: #1565c0;
+  box-shadow: 0 0 0 2px rgba(21, 101, 192, 0.2);
+}
+
+.assignments-jump {
+  font-size: 1.6em;
+  margin-top: 1.4em;      /* clear separation from the search box above */
+  margin-bottom: 1.4em;
+}
+
+.assignments-jump-label {
+  margin-right: 0.5em;
+}
+
+.assignments-jump-letters {
+  white-space: normal;
+}
+
+.assignments-jump a {
+  display: inline-block;
+  padding: 0.15em 0.5em;
+  margin: 0.25em 0.18em;  /* space between adjacent letters */
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.assignments-jump a:hover,
+.assignments-jump a:focus {
+  background: #e8f0fe;
+  text-decoration: none;
+}
+
+/* Theme sets .schedule-tbl th to 2em; match the body cells instead.
+   Two classes so this beats the theme rule without touching the Program table. */
+.assignments-tbl.schedule-tbl th {
+  font-size: 1.4em;
+  line-height: 1.4em;
+  padding: 12px 30px;
+}
+
+.assignments-surname {
+  color: #1a3161;
+  font-weight: 600;
+}
+
+.doi-missing,
+.content .doi-missing {
+  color: #b00020;
+  font-weight: 500;
+}
+
+.content .doi-missing:hover,
+.content .doi-missing:focus {
+  color: #7f0016;
+}
+
+/* ================================================================
    SPEAKER BADGE + SEPARATORS
    ================================================================ */
 .speech-time {
@@ -396,5 +506,44 @@ nav {
 
   .footer p {
     color: #9e9e9e;
+  }
+
+  /* Assignments page */
+  input[type="search"].assignments-search {
+    color: #e0e0e0;
+    background: #1e1e1e;
+    border-color: #444;
+  }
+
+  .assignments-search::placeholder {
+    color: #9e9e9e;
+  }
+
+  input[type="search"].assignments-search:focus {
+    border-color: #90b8f8;
+    box-shadow: 0 0 0 2px rgba(144, 184, 248, 0.25);
+  }
+
+  .assignments-jump a:hover,
+  .assignments-jump a:focus {
+    background: rgba(144, 184, 248, 0.15);
+  }
+
+  .assignments-surname {
+    color: #e0e0e0;
+  }
+
+  .assignments-updated {
+    color: #9e9e9e;
+  }
+
+  .doi-missing,
+  .content .doi-missing {
+    color: #ff8a80;
+  }
+
+  .content .doi-missing:hover,
+  .content .doi-missing:focus {
+    color: #ffb4ab;
   }
 }

@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <title>{{ .Site.Params.Assignments.title }} &middot; {{ .Site.Params.Name }}</title>
+
+  <meta charset="utf-8">
+  <meta name="author" content="{{ .Site.Params.Name }}" />
+  <meta name="description" content="{{ .Site.Params.Assignments.description }}">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  {{ hugo.Generator }}
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/css/custom.css">
+</head>
+<body>
+
+{{/* ---- Load the CSV (assets/<params.Assignments.csv>) into a sorted slice ---- */}}
+{{ $p := .Site.Params.Assignments }}
+{{ $doiForm := "" }}
+{{ with .Site.Params.PosterSession }}{{ with .instructions }}{{ $doiForm = .submission_link }}{{ end }}{{ end }}
+
+{{ $people := slice }}
+{{ with resources.Get $p.csv }}
+  {{ $rows := . | transform.Unmarshal (dict "delimiter" ",") }}
+  {{ if gt (len $rows) 1 }}
+    {{ range after 1 $rows }}
+      {{ if and (ge (len .) 5) (ne (trim (index . 0) " ") "") }}
+        {{ $people = $people | append (dict
+              "surname"  (trim (index . 0) " ")
+              "name"     (trim (index . 1) " ")
+              "breakout" (trim (index . 2) " ")
+              "poster"   (trim (index . 3) " ")
+              "doi"      (trim (index . 4) " ")) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $people = sort $people "surname" }}
+
+{{/* Distinct initial letters, for the A–Z jump links */}}
+{{ $letters := slice }}
+{{ range $people }}
+  {{ $l := upper (substr .surname 0 1) }}
+  {{ if not (in $letters $l) }}{{ $letters = $letters | append $l }}{{ end }}
+{{ end }}
+
+<div class="global">
+
+  <header class="header">
+    <div class="wrapper">
+      <h1 class="logo-name">
+        <a class="logo-link" href="/" title="{{ .Site.Params.Name }}">{{ .Site.Params.Name }}</a>
+      </h1>
+      <h1 class="tagline">{{ $p.title }}</h1>
+    </div>
+  </header>
+
+  <hr>
+
+  <div class="content" id="content">
+    <div class="wrapper">
+      <section class="assignments" id="assignments">
+
+        <p class="assignments-back"><a href="/">&larr; Back to the main page</a></p>
+
+        <h2 class="section-title">{{ $p.title }}</h2>
+
+        <p class="assignments-intro">{{ $p.description }}</p>
+
+        {{ if $people }}
+          <input type="search" id="assignments-search" class="assignments-search"
+                 placeholder="Type your name to filter&hellip;"
+                 autocomplete="off" aria-label="Filter assignments by name">
+
+          <p class="assignments-jump">
+            <span class="assignments-jump-label">Or jump to a surname beginning with:</span>
+            <span class="assignments-jump-letters">
+              {{ range $letters }}<a href="#letter-{{ . }}">{{ . }}</a>{{ end }}
+            </span>
+          </p>
+
+          <div class="schedule-tbl assignments-tbl">
+            <table>
+              <thead>
+                <tr>
+                  <th>Surname</th>
+                  <th>Name</th>
+                  <th>Breakout Room</th>
+                  <th>Poster Session</th>
+                  <th>DOI</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{ $prev := "" }}
+                {{ range $people }}
+                  {{ $l := upper (substr .surname 0 1) }}
+                  <tr data-search="{{ lower (printf "%s %s" .surname .name) }}"
+                      {{ if ne $l $prev }}id="letter-{{ $l }}"{{ end }}>
+                    <td class="assignments-surname">{{ .surname }}</td>
+                    <td>{{ .name }}</td>
+                    <td>{{ .breakout | default "-" }}</td>
+                    <td>{{ .poster | default "-" }}</td>
+                    <td>
+                      {{ if .doi }}
+                        <a href="{{ .doi }}" target="_blank" rel="noopener">{{ .doi }}</a>
+                      {{ else }}
+                        <a class="doi-missing" href="{{ $doiForm }}" target="_blank" rel="noopener">{{ $p.missing_doi_text }}</a>
+                      {{ end }}
+                    </td>
+                  </tr>
+                  {{ $prev = $l }}
+                {{ end }}
+                <tr id="assignments-nomatch" style="display: none;">
+                  <td colspan="5">No one by that name is listed. Please contact the organizers.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {{ with $p.updated }}<p class="assignments-updated">Last updated: {{ . }}</p>{{ end }}
+        {{ else }}
+          <p class="assignments-intro">{{ $p.empty }}</p>
+        {{ end }}
+
+      </section>
+
+      <footer class="footer">
+        <p>The content on this page does not reflect the views of the NSF or its program directors, nor is it making recommendations or proposals to the NSF. Any recommendations or proposals herein are intended for the community of scholars who contributed to this event.</p>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var box = document.getElementById('assignments-search');
+    if (!box) return;
+    var rows = document.querySelectorAll('.assignments-tbl tbody tr[data-search]');
+    var none = document.getElementById('assignments-nomatch');
+
+    box.addEventListener('input', function () {
+      var q = box.value.trim().toLowerCase();
+      var shown = 0;
+      for (var i = 0; i < rows.length; i++) {
+        var hit = !q || rows[i].getAttribute('data-search').indexOf(q) !== -1;
+        rows[i].style.display = hit ? '' : 'none';
+        if (hit) shown++;
+      }
+      none.style.display = shown === 0 ? '' : 'none';
+    });
+  })();
+</script>
+
+</body>
+</html>

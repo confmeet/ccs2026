@@ -38,6 +38,20 @@ params:
     text: "Register"
     link: "https://www.cavs.msstate.edu/conferences/2026NSFCyberPI/register/"
 
+  # Session assignments lookup page (rendered at /assignments/).
+  # Data comes from a CSV committed to the repo with the columns:
+  #   surname,name,breakout,poster,doi
+  # `csv` is a path relative to the top-level assets/ directory,
+  # i.e. "data/assignments.csv" means the file assets/data/assignments.csv
+  Assignments:
+    title: "Session Assignments"
+    csv: "data/assignments.csv"
+    link_text: "View My Assignments"
+    description: "Find your name below to see which breakout session and which poster session you have been assigned to, and whether we have received the DOI for your archived poster."
+    empty: "Assignments are not yet available. Please check back closer to the meeting."
+    missing_doi_text: "MISSING. Please complete this form to submit your DOI."
+    updated: "TBD"
+
   # About section body (supports Markdown)
   About:
     body: |
@@ -177,4 +191,4 @@ params:
             description: "Prof. Sussman will deliver closing remarks in ..."
             time: "12:30pm"
         - name: "Lunch"
-          time: "12:30pm"
+          time: "12:45pm"

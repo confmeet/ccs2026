@@ -25,10 +25,20 @@
               <td class="schedule-description">{{ .presentation.description }}</td>
             </tr>
           {{ else }}
+            {{/* Breakout and poster rows link to the assignments lookup page */}}
+            {{ $n := lower .name }}
+            {{ $isAssigned := or (in $n "breakout") (in $n "poster") }}
             <tr class="schedule-other">
               <td class="schedule-time">{{ .time }}</td>
               <td class="schedule-slot">{{ .name }}</td>
-              <td class="schedule-description">{{ .description | default "-" }}</td>
+              <td class="schedule-description">
+                {{ with .description }}{{ . }}{{ else }}{{ if not $isAssigned }}-{{ end }}{{ end }}
+                {{ if $isAssigned }}
+                  {{ with $.assignments }}
+                    <a href="/assignments/" class="btn">{{ .link_text }}</a>
+                  {{ end }}
+                {{ end }}
+              </td>
             </tr>
           {{ end }}
         {{ end }}

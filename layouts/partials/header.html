@@ -19,6 +19,10 @@
       {{ with .calltoaction }}
         <a href="{{ .link }}" class="call-action-link" target="_blank" title="{{ .text }}">{{ .text }}</a>
       {{ end }}
+
+      {{ with .assignments }}
+        <a href="/assignments/" class="call-action-link" title="{{ .link_text }}">{{ .link_text }}</a>
+      {{ end }}
     </div>
   </div>
 </header>
