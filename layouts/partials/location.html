@@ -8,6 +8,10 @@
   <span itemprop="addressRegion">{{ .state }}</span>
 </p>
 
+{{ with .location.map_link }}
+<p><a href="{{ . }}" target="_blank">View Birdseye Map of Venue &amp; Nearby Landmarks (PDF)</a></p>
+{{ end }}
+
 {{ with .location }}
 
   {{ with .hotel }}

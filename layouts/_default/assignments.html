@@ -109,8 +109,10 @@
                     <td>
                       {{ if .doi }}
                         <a href="{{ .doi }}" target="_blank" rel="noopener">{{ .doi }}</a>
-                      {{ else }}
+                      {{ else if .poster }}
                         <a class="doi-missing" href="{{ $doiForm }}" target="_blank" rel="noopener">{{ $p.missing_doi_text }}</a>
+                      {{ else }}
+                        -
                       {{ end }}
                     </td>
                   </tr>

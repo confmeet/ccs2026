@@ -43,6 +43,9 @@ params:
   #   surname,name,breakout,poster,doi
   # `csv` is a path relative to the top-level assets/ directory,
   # i.e. "data/assignments.csv" means the file assets/data/assignments.csv
+  # Main floor map (PDF), linked at the top of the Program section
+  MainFloorMap: "/pdf/main-floor-map.pdf"
+
   Assignments:
     title: "Session Assignments"
     csv: "data/assignments.csv"
@@ -50,7 +53,7 @@ params:
     description: "Find your name below to see which breakout session and which poster session you have been assigned to, and whether we have received the DOI for your archived poster."
     empty: "Assignments are not yet available. Please check back closer to the meeting."
     missing_doi_text: "MISSING. Please complete this form to submit your DOI."
-    updated: "TBD"
+    updated: "August 26, 2026"
 
   # About section body (supports Markdown)
   About:
@@ -76,7 +79,7 @@ params:
       example_CSSI_link: "https://doi.org/10.6084/m9.figshare.24107424.v1"
       archiving: "In addition to printing and presenting a physical poster, you must archive a digitial version of your poster on FigShare and share your DOI with us. Instructions for doing so are available in the "
       submission_link: "https://TBD"
-    deadline: "TBD"
+    deadline: "September 11, 2026 at 11:59pm ET."
     sessions: ""
 
 
@@ -89,6 +92,7 @@ params:
       booking_deadline: "August 20, 2026"
       rate: "249.00 per night plus taxes and fees"
       notes: "A room block has been reserved for conference attendees at a discounted rate. To take advantage of the rate use"
+    map_link: "/pdf/venue-birdseye-map.pdf"
     travel: |
       **By Air:** The nearest airports are Ronald Reagan Washington National Airport (~20 miles), Washington Dulles International Airport (~25 miles), and Baltimore/Washington International (~35 miles).
 
@@ -111,7 +115,7 @@ params:
     - name: "Monday, Sept. 14"
       schedule:
         - name: "Registration & Breakfast"
-          description: "Please join us in ... to register and have breakfast."
+          description: "Please join us in the Grand Ballroom (Salons F-H) to register and have breakfast."
           time: "8:00am"
         - name: "Prof. Neeraj Rai" 
           photo: "/img/speakers/neeraj-rai.jpg"
@@ -122,36 +126,45 @@ params:
             text: "(Website)"
           presentation:
             title: "Opening Remarks"
-            description: "Prof. Rai will deliver opening remarks in ..."
+            description: "Prof. Rai will deliver opening remarks in the Grand Ballroom (Salon E)."
             time: "8:45am"
         - name: "Keynote I"
           time: "9:00am"
+          description: "Grand Ballroom (Salon E)"
         - name: "Keynote II"
           time: "9:30am"
+          description: "Grand Ballroom (Salon E)"
         - name: "Break"
           time: "10:00am"
         - name: "Poster Session I" 
           time: "10:15am"
+          description: "Grand Ballroom (Salons A-D). Check your assignments to see if you are presenting."
         - name: "Lunch"
           time: "11:45am"
+          description: "Please join us in the Grand Ballroom (Salons F-H) for lunch."
         - name: "Poster Session II" 
           time: "12:45pm"
+          description: "Grand Ballroom (Salons A-D). Check your assignments to see if you are presenting."
         - name: "Break"
           time: "2:15pm"
         - name: "Breakout Sessions"
           time: "2:30pm"
+          description: "Check your assignments to see your breakout session and its room."
+          map_link: "/pdf/breakout-rooms-map.pdf"
         - name: "Break" 
           time: "4:15pm"
         - name: "Poster Session III" 
           time: "4:30pm"
+          description: "Grand Ballroom (Salons A-D). Check your assignments to see if you are presenting."
         - name: "Main Reception"
           time: "6:00pm"
-          description: "Please join us for a 1 hour reception in ... following the poster session. Hors d'oeuvres will be served."
+          description: "Please join us for a reception in the Grand Ballroom (Salons A-D) following the poster session. Hors d'oeuvres will be served."
 
     - name: "Tuesday, Sept. 15"
       schedule:
         - name: "Registration & Breakfast"
           time: "8:00am"
+          description: "Please join us in the Grand Ballroom (Salons F-H) for breakfast. The registration table will still be available for late arrivals."
         - name: "Dir. Katie Antypas"
           photo: "/img/speakers/katie-antypas.jpg"
           company: "National Science Foundation"
@@ -162,7 +175,7 @@ params:
             text: "(OAC Website)"
           presentation:
             title: "Advancing Innovation and Discovery through an Integrated Cyberinfrastructure"
-            description: "Director Antypas will ..."
+            description: "Grand ballroom (Salon E). Director Antypas will ..."
         - name: "Prof. Kenneth Merz"
           photo: "/img/speakers/kenneth-merz.jpg"
           company: "Cleveland Clinic"
@@ -173,12 +186,13 @@ params:
             text: "(Website)"
           presentation: 
             title: "TBA" 
-            description: "TBA"
+            description: "Grand Ballroom (Salon E)."
         - name: "Breakout Reports"
           time: "10:00am"
           description: "Speakers from each breakout section will report on their respective sessions and findings."
         - name: "Poster Session IV"
           time: "11:00am" 
+          description: "Grand Ballroom (Salons A-D). Check your assignments to see if you are presenting."
         - name: "Prof. Alan Sussman"
           photo: "/img/speakers/alan-sussman.jpg"
           bio: "Alan Sussman is a Professor in the Department of Computer Science at the University of Maryland, College Park, where he also serves as the Associate Chair for Undergraduate Education. He previously served as a Program Director at the NSF within the CISE Directorate. He focuses on parallel and distributed systems, high-performance computing, and computer science education."
@@ -188,7 +202,11 @@ params:
             text: "(Website)"
           presentation:
             title: "Closing Remarks"
-            description: "Prof. Sussman will deliver closing remarks in ..."
+            description: "Prof. Sussman will deliver closing remarks in the Grand Ballroom (Salon E)"
             time: "12:30pm"
         - name: "Lunch"
           time: "12:45pm"
+          description: "Please join us in the Grand Ballroom (Salons F-H) for lunch."
+        - name: "Meeting adjourned"
+          time: "1:45pm"
+          description: "Thank you for joining the PI meeting. Please travel safely."

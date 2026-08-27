@@ -1,5 +1,9 @@
 <h2 class="section-title">{{ .titles.schedule }}</h2>
 
+{{ with .mainfloormap }}
+<p><a href="{{ . }}" target="_blank">View Main Floor Map (PDF)</a></p>
+{{ end }}
+
 <div class="schedule-tbl">
   <table>
     <thead>
@@ -37,6 +41,9 @@
                   {{ with $.assignments }}
                     <a href="/assignments/" class="btn">{{ .link_text }}</a>
                   {{ end }}
+                {{ end }}
+                {{ with .map_link }}
+                  and <a href="{{ . }}" target="_blank">Breakout Room Map</a>
                 {{ end }}
               </td>
             </tr>
