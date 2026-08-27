@@ -33,23 +33,22 @@
   {{ $rows := . | transform.Unmarshal (dict "delimiter" ",") }}
   {{ if gt (len $rows) 1 }}
     {{ range after 1 $rows }}
-      {{ if and (ge (len .) 5) (ne (trim (index . 0) " ") "") }}
+      {{ if and (ge (len .) 4) (ne (trim (index . 0) " ") "") }}
         {{ $people = $people | append (dict
-              "surname"  (trim (index . 0) " ")
-              "name"     (trim (index . 1) " ")
-              "breakout" (trim (index . 2) " ")
-              "poster"   (trim (index . 3) " ")
-              "doi"      (trim (index . 4) " ")) }}
+              "name"     (trim (index . 0) " ")
+              "breakout" (trim (index . 1) " ")
+              "poster"   (trim (index . 2) " ")
+              "doi"      (trim (index . 3) " ")) }}
       {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $people = sort $people "surname" }}
+{{ $people = sort $people "name" }}
 
 {{/* Distinct initial letters, for the A–Z jump links */}}
 {{ $letters := slice }}
 {{ range $people }}
-  {{ $l := upper (substr .surname 0 1) }}
+  {{ $l := upper (substr .name 0 1) }}
   {{ if not (in $letters $l) }}{{ $letters = $letters | append $l }}{{ end }}
 {{ end }}
 
@@ -92,7 +91,6 @@
             <table>
               <thead>
                 <tr>
-                  <th>Surname</th>
                   <th>Name</th>
                   <th>Breakout Room</th>
                   <th>Poster Session</th>
@@ -102,11 +100,10 @@
               <tbody>
                 {{ $prev := "" }}
                 {{ range $people }}
-                  {{ $l := upper (substr .surname 0 1) }}
-                  <tr data-search="{{ lower (printf "%s %s" .surname .name) }}"
+                  {{ $l := upper (substr .name 0 1) }}
+                  <tr data-search="{{ lower .name }}"
                       {{ if ne $l $prev }}id="letter-{{ $l }}"{{ end }}>
-                    <td class="assignments-surname">{{ .surname }}</td>
-                    <td>{{ .name }}</td>
+                    <td class="assignments-surname">{{ .name }}</td>
                     <td>{{ .breakout | default "-" }}</td>
                     <td>{{ .poster | default "-" }}</td>
                     <td>
@@ -120,7 +117,7 @@
                   {{ $prev = $l }}
                 {{ end }}
                 <tr id="assignments-nomatch" style="display: none;">
-                  <td colspan="5">No one by that name is listed. Please contact the organizers.</td>
+                  <td colspan="4">No one by that name is listed. Please contact the organizers.</td>
                 </tr>
               </tbody>
             </table>
