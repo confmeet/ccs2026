@@ -1,1 +1,3 @@
 public/
+processing/*.csv
+__pycache__/
