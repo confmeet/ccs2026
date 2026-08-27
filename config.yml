@@ -165,11 +165,11 @@ params:
             description: "Director Antypas will ..."
         - name: "Prof. Kenneth Merz"
           photo: "/img/speakers/kenneth-merz.jpg"
-          company: "Michigan State University"
-          bio: "Kenneth M. Merz, professor of chemistry and Joseph Zichis Chair in Chemistry, develops theoretical and computational tools and explores their application to biological problems, including structure and ligand-based drug design, mechanistic enzymology and model verification and validation. He is currently the director for the Institute of Cyber-Enabled Research (iCER) at MSU. Merz received his undergraduate degree in chemistry from Washington College and his Ph.D. in chemistry from the University of Texas at Austin, where he focused on computational chemistry. InAugust 2013, he came to MSU from the University of Florida where he was a UF Research Foundation Professor, the Edmund H. Prominski Professor of Chemistry and a member of the Quantum Theory Project."
+          company: "Cleveland Clinic"
+          bio: "Kenneth M. Merz Jr., Ph.D. is a Quantum Molecular Scientist in the Center for Computational Life Sciences at Cleveland Clinic. His research interests include computational chemistry, molecular simulation, drug discovery, and quantum computing applications in the life sciences. Prior to joining Cleveland Clinic, he served as a University Distinguished Professor and the Joseph Zichis Chair in Chemistry at Michigan State University and held faculty appointments at the University of Florida and Pennsylvania State University. Dr. Merz is Editor-in-Chief of the Journal of Chemical Information and Modeling and has authored more than 400 scientific publications."
           time: "9:30am" 
           link:
-            href: "https://www.chemistry.msu.edu/faculty-research/faculty-members/merz-kenneth.aspx"
+            href: "https://www.lerner.ccf.org/computational-medicine/merz/"
             text: "(Website)"
           presentation: 
             title: "TBA" 
