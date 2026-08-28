@@ -185,8 +185,8 @@ params:
             href: "https://www.lerner.ccf.org/computational-medicine/merz/"
             text: "(Website)"
           presentation: 
-            title: "TBA" 
-            description: "Grand Ballroom (Salon E)."
+            title: "Applications of Quantum Computers in Chemistry" 
+            description: "Grand Ballroom (Salon E). Computing hardware has long followed Moore’s Law; however, its steady gains in computational performance are expected to plateau in the coming years. As a result, the computer hardware industry is actively exploring new paradigms to sustain performance growth. Quantum computing offers a promising pathway, though current quantum hardware remains limited by significant noise, necessitating effective error mitigation strategies. Recently, IBM introduced subspace quantum diagonalization (SQD), a method for solving electronic structure problems relevant to chemistry. SQD exemplifies the emerging paradigm of quantum-centric supercomputing (QCSC), in which quantum processors are deployed for targeted subproblems while classical hardware manages the remaining computational workload. In this presentation, I will review the theoretical foundations of the SQD method and highlight its applications in chemistry, including the study of intermolecular interactions, calculations on large drug-like molecules and biomolecules, the incorporation of solvation effects, and the integration of SQD with statistical mechanical approaches."
         - name: "Breakout Reports"
           time: "10:00am"
           description: "Speakers from each breakout section will report on their respective sessions and findings."
