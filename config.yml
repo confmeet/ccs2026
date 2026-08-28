@@ -110,7 +110,7 @@ params:
     - name: "Sunday, Sept. 13"
       schedule:
         - name: "Welcome Reception"
-          description: "Please join us for a 3 hour in ... for a welcome reception. Hors d'oeuvres will be served."
+          description: "Please join us in Strathmore (lower level) for a welcome reception. Hors d'oeuvres will be served."
           time: "5:00pm"
     - name: "Monday, Sept. 14"
       schedule:
@@ -149,7 +149,7 @@ params:
           time: "2:15pm"
         - name: "Breakout Sessions"
           time: "2:30pm"
-          description: "Check your assignments to see your breakout session and its room."
+          description: "Check your assignments to see your breakout session and its room. All rooms are on the lower level."
           map_link: "/pdf/breakout-rooms-map.pdf"
         - name: "Break" 
           time: "4:15pm"
