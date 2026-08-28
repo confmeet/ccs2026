@@ -169,24 +169,24 @@ params:
           photo: "/img/speakers/katie-antypas.jpg"
           company: "National Science Foundation"
           bio: "Katie Antypas is NSF’s Director of the Office of Advanced Cyberinfrastructure which supports the development and deployment of advanced data, computing, and networking infrastructure, as well as the software, tools, services, and training for the research community. It is also the Office responsible for the launch and deployment of the National AI Research Resource (NAIRR) Pilot. Prior to joining NSF Katie spent 17 years at Lawrence Berkeley National Laboratory at the National Energy Research Scientific Computing Center in a variety of leadership roles leading the deployment of large-scale high-performance computing systems and supporting the scientific research community using them. She has an M.S. in CS from the University of Chicago and a Bachelor degree in Physics from Wellesley College."
-          time: "9:00am"
           link:
             href: "https://www.nsf.gov/cise/office-advanced-cyberinfrastructure"
             text: "(OAC Website)"
           presentation:
             title: "Update from the NSF Office of Advanced Cyberinfrastructure"
+            time: "9:00am"
             description: "Grand ballroom (Salon E). In this talk Dir. Antypas will highlight new programs and recent awards relevant to the Cyberinfrastructure community."
         - name: "Prof. Kenneth Merz"
           photo: "/img/speakers/kenneth-merz.jpg"
           company: "Cleveland Clinic"
           bio: "Kenneth M. Merz Jr., Ph.D. is a Quantum Molecular Scientist in the Center for Computational Life Sciences at Cleveland Clinic. His research interests include computational chemistry, molecular simulation, drug discovery, and quantum computing applications in the life sciences. Prior to joining Cleveland Clinic, he served as a University Distinguished Professor and the Joseph Zichis Chair in Chemistry at Michigan State University and held faculty appointments at the University of Florida and Pennsylvania State University. Dr. Merz is Editor-in-Chief of the Journal of Chemical Information and Modeling and has authored more than 400 scientific publications."
-          time: "9:30am" 
           link:
             href: "https://www.lerner.ccf.org/computational-medicine/merz/"
             text: "(Website)"
           presentation: 
             title: "Applications of Quantum Computers in Chemistry" 
             description: "Grand Ballroom (Salon E). Computing hardware has long followed Moore’s Law; however, its steady gains in computational performance are expected to plateau in the coming years. As a result, the computer hardware industry is actively exploring new paradigms to sustain performance growth. Quantum computing offers a promising pathway, though current quantum hardware remains limited by significant noise, necessitating effective error mitigation strategies. Recently, IBM introduced subspace quantum diagonalization (SQD), a method for solving electronic structure problems relevant to chemistry. SQD exemplifies the emerging paradigm of quantum-centric supercomputing (QCSC), in which quantum processors are deployed for targeted subproblems while classical hardware manages the remaining computational workload. In this presentation, I will review the theoretical foundations of the SQD method and highlight its applications in chemistry, including the study of intermolecular interactions, calculations on large drug-like molecules and biomolecules, the incorporation of solvation effects, and the integration of SQD with statistical mechanical approaches."
+            time: "9:30am" 
         - name: "Breakout Reports"
           time: "10:00am"
           description: "Speakers from each breakout section will report on their respective sessions and findings."
