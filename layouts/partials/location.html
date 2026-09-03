@@ -30,4 +30,11 @@
   <div class="location-travel">{{ . | markdownify }}</div>
   {{ end }}
 
+  <h3 class="location-subtitle">Parking</h3>
+  <p>Parking is free. Upon entering, please pull a parking ticket. When exiting 
+    simply drive up to the gate, the arms will automatically lift, and you may exit.
+    There is no need to present the ticket nor make a payment. 
+    A parking map is available <a href="{{ .parking_map_link }}" target="_blank">here</a>.
+  </p>
+
 {{ end }}

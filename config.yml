@@ -97,6 +97,7 @@ params:
       **By Air:** The nearest airports are Ronald Reagan Washington National Airport (~20 miles), Washington Dulles International Airport (~25 miles), and Baltimore/Washington International (~35 miles).
 
       **By Metro from Downtown DC:** Take the Red Line to the North Bethesda Station. The hotel is approximately a 5-minute walk from the station exit.
+    parking_map_link: "/pdf/parking-map.pdf"
   # Childcare details
   Childcare:
     description: "Childcare services will be available for registered attendees with young children. Please contact the organizers to arrange childcare."
@@ -116,7 +117,7 @@ params:
       schedule:
         - name: "Registration & Breakfast"
           description: "Please join us in the Grand Ballroom (Salons F-H) to register and have breakfast."
-          time: "8:00am"
+          time: "7:45am"
         - name: "Prof. Neeraj Rai" 
           photo: "/img/speakers/neeraj-rai.jpg"
           bio: "Neeraj Rai is the Ergon, Inc. Distinguished Professor in the Dave C. Swalm School of Chemical Engineering and a researcher with the High Performance Computing Collaboratory at Mississippi State University. Prof. Rai’s work focuses on bridging discipline-specific engineering knowledge with modern data science, artificial intelligence, and high-performance computing infrastructure."
@@ -128,12 +129,35 @@ params:
             title: "Opening Remarks"
             description: "Prof. Rai will deliver opening remarks in the Grand Ballroom (Salon E)."
             time: "8:45am"
-        - name: "Keynote I"
-          time: "9:00am"
-          description: "Grand Ballroom (Salon E)"
-        - name: "Keynote II"
-          time: "9:30am"
-          description: "Grand Ballroom (Salon E)"
+        - name: "Dr. Irina Dolinskaya"
+          photo: "/img/speakers/irina-dolinskaya.jpg"
+          bio: "Irina Dolinskaya is the Directorate Head for the Directorate for Computer and Information Science and Engineering (CISE). Prior to becoming the Directorate Head, she was the Deputy Division Director in the Division of Computing and Communication Foundations in CISE; and was a Program Director in the Division of Civil, Mechanical & Manufacturing Innovation (CMMI) in the Directorate for Engineering (ENG). Dr. Dolinskaya serviced Dynamics, Control and Systems Diagnostics (DCSD) and Foundational Research in Robotics (FRR) programs, as well as National Robotics Initiative (NRI 3.0) and Navigating the New Arctic (NNA) NSF's 10 Big Ideas. Prior to joining NSF, Dr. Dolinskaya was a faculty member in the Industrial Engineering and Management Sciences department at Northwestern University. She obtained M.S. and Ph.D. degrees in Industrial and Operations Engineering from the University of Michigan, and B.S. degree in Industrial Engineering from the University of Florida."
+          company: "National Science Foundation"
+          link:
+            href: "https://www.linkedin.com/in/irina-dolinskaya-a777627/"
+            text: "(LinkedIn)"
+          presentation:
+            title: "TBA"
+            description: "Grand Ballroom (Salon E). TBA"
+            time: "9:00am"
+            co_presenters: ["Dr. Amy Walton"]
+        - name: "Dr. Amy Walton"
+          photo: ""
+          bio: "Amy Walton is the Deputy Directorate Head for the Directorate for Computer and Information Science and Engineering (CISE). Prior to her current role, she was a Program Director in the Office of Advanced Cyberinfrastructure, contributing to several cross-foundational activities in which NSF has a leadership role: harnessing the Data Revolution, emphasizing data-intensive research in science and engineering; enabling Quantum Leap, through foundries for quantum materials science, engineering and information; Cyberinfrastructure for Sustained Scientific Innovation, focused upon the availability and interoperability of science data cyberinfrastructure; and EarthCube, an integrated geoscience research program."
+          company: "National Science Foundation"
+          presentation:
+            skip_program_row: true
+        - name: "Dr. Benjamin Brown"
+          photo:
+          bio: "Benjamin Brown is the director of research computing and networking infrastructure at the U.S. Department of Energy's Office of Science, and is a member of the Senior Executive Service."
+          company: "Department of Energy"
+          link:
+            href: "https://science.osti.gov/ascr/About/Staff"
+            text: "(Contact)"
+          presentation:
+            title: "TBA"
+            description: "Grand Ballroom (Salon E). TBA"
+            time: "9:30am"
         - name: "Break"
           time: "10:00am"
         - name: "Poster Session I" 
@@ -189,7 +213,7 @@ params:
             time: "9:30am" 
         - name: "Breakout Reports"
           time: "10:00am"
-          description: "Speakers from each breakout section will report on their respective sessions and findings."
+          description: "Grand Ballroom (Salon E). Speakers from each breakout section will report on their respective sessions and findings."
         - name: "Poster Session IV"
           time: "11:00am" 
           description: "Grand Ballroom (Salons A-D). Check your assignments to see if you are presenting."

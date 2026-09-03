@@ -20,14 +20,17 @@
         </tr>
         {{ range $slot := .schedule }}
           {{ if ne .presentation nil }}
-            <tr>
-              <td class="schedule-time">{{ .presentation.time }}</td>
-              <td class="schedule-slot">
-                {{ .presentation.title }} by {{ .name }}
-                <span class="speakers-company">{{ .company }}</span>
-              </td>
-              <td class="schedule-description">{{ .presentation.description }}</td>
-            </tr>
+            {{ if not .presentation.skip_program_row }}
+              <tr>
+                <td class="schedule-time">{{ .presentation.time }}</td>
+                <td class="schedule-slot">
+                  {{ .presentation.title }} by {{ .name }}
+                  {{ range .presentation.co_presenters }} and {{ . }}{{ end }}
+                  <span class="speakers-company">{{ .company }}</span>
+                </td>
+                <td class="schedule-description">{{ .presentation.description }}</td>
+              </tr>
+            {{ end }}
           {{ else }}
             {{/* Breakout and poster rows link to the assignments lookup page */}}
             {{ $n := lower .name }}
