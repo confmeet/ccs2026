@@ -120,7 +120,7 @@ params:
           time: "7:45am"
         - name: "Prof. Neeraj Rai" 
           photo: "/img/speakers/neeraj-rai.jpg"
-          bio: "Neeraj Rai is the Ergon, Inc. Distinguished Professor in the Dave C. Swalm School of Chemical Engineering and a researcher with the High Performance Computing Collaboratory at Mississippi State University. Prof. Rai’s work focuses on bridging discipline-specific engineering knowledge with modern data science, artificial intelligence, and high-performance computing infrastructure."
+          bio: "Neeraj Rai is the Ergon, Inc. Distinguished Professor in the Dave C. Swalm School of Chemical Engineering and the Center for Advanced Vehicular Systems at Mississippi State University. His research integrates molecular modeling, high-performance computing, data science, and machine learning to study interfacial molecular science for catalysis and to design and develop optoelectronic materials. He also develops computational tools and training resources that broaden access to advanced computing and enable data- and computation-intensive research. He led the establishment of i-CoMSE, the NSF-supported Institute for Computational Molecular Science Education, which trains the next generation of scientists and engineers in computational molecular science and engineering."
           company: "Mississippi State University"
           link:
             href: "https://www.che.msstate.edu/people/faculty/neeraj-rai/"
