@@ -148,15 +148,15 @@ params:
           presentation:
             skip_program_row: true
         - name: "Dr. Benjamin Brown"
-          photo:
-          bio: "Benjamin Brown is the director of research computing and networking infrastructure at the U.S. Department of Energy's Office of Science, and is a member of the Senior Executive Service."
+          photo: "/img/speakers/ben-brown.jpg"
+          bio: "Dr. Benjamin (Ben) Brown is the Director of the Facilities Division in the U.S. Department of Energy’s Office of Science, Advanced Scientific Computing Research program. Ben leads and executes the conception, construction, and operation of DOE’s world-leading research supercomputing, data, and networking infrastructure to enable the DOE mission and the national research enterprise.  Ben is the federal executive lead for the American Science Cloud, the open science infrastructure for the Genesis Mission Platform, and is the lead architect of the Department’s Integrated Research Infrastructure effort to achieve seamless interoperability of experimental, observational, computational, network, and data infrastructure.  Ben has been a member of the federal Senior Executive Service since 2020.  He has over twenty years of government service with extensive experience in research infrastructure strategy, budget formulation, risk management, and project management.  He is a Ph.D. experimental physicist with specialization in ultrafast optics, ultracold atomic physics, and quantum information science."
           company: "Department of Energy"
           link:
             href: "https://science.osti.gov/ascr/About/Staff"
             text: "(Contact)"
           presentation:
-            title: "TBA"
-            description: "Grand Ballroom (Salon E). TBA"
+            title: "An Update on the Genesis Mission Platform"
+            description: "Grand Ballroom (Salon E).  Since the Administration announced the Genesis Mission in November 2025, the DOE Office of Science Advanced Scientific Computing Research (ASCR) program has advanced the strategy and implementation approach to the Genesis Mission Platform: the federated computing, data, and networking infrastructure that will enable integrated AI workflows.  This presentation will provide a status update on these efforts, and specifically address our ambitions for the Genesis Platform in the contexts of AI, HPC, and Quantum Information Science."
             time: "9:30am"
         - name: "Break"
           time: "10:00am"
