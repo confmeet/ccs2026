@@ -15,6 +15,7 @@ template limitation, not something this script can fix.
 """
 
 import re
+from collections import defaultdict
 
 import pandas as pd
 
@@ -28,6 +29,17 @@ def normalize_name(name):
     return re.sub(r"\s+", " ", name.strip())
 
 
+def match_key(name):
+    """Key used to match a form respondent to an assignments.csv row.
+
+    Case-insensitive: form respondents don't reliably capitalize their own
+    name the same way twice (e.g. a repeat submitter entering "peter
+    lauritzen" the second time round), and matches must still land on the
+    single canonical assignments.csv row.
+    """
+    return normalize_name(name).casefold()
+
+
 def normalize_doi(raw):
     raw = raw.strip()
     match = DOI_RE.search(raw)
@@ -36,43 +48,48 @@ def normalize_doi(raw):
     return f"https://doi.org/{match.group(0)}"
 
 
-def build_doi_by_name(form_csv=FORM_CSV):
+def fill_doi(assignments_csv=ASSIGNMENTS_CSV, form_csv=FORM_CSV):
     form = pd.read_csv(form_csv)
     form["Name"] = (
         form["First Name(s)"].str.strip() + " " + form["Last Name(s)"].str.strip()
     ).map(normalize_name)
     form["DOI"] = form["Figshare DOI"].map(normalize_doi)
 
-    doi_by_name = {}
-    for name, group in form.groupby("Name", sort=False):
-        dois = [d for d in group["DOI"] if d]
-        if dois:
-            doi_by_name[name] = "; ".join(dois)
-    return doi_by_name
-
-
-def fill_doi(assignments_csv=ASSIGNMENTS_CSV, form_csv=FORM_CSV):
-    doi_by_name = build_doi_by_name(form_csv)
     table = pd.read_csv(assignments_csv, keep_default_na=False)
+    idx_by_key = {match_key(name): idx for idx, name in table["name"].items()}
 
-    filled, skipped_existing, unmatched = [], [], []
-    for name, doi in doi_by_name.items():
-        matches = table.index[table["name"].map(normalize_name) == name]
-        if len(matches) == 0:
-            unmatched.append(name)
+    # pandas coerces a Python None returned from .map() into float NaN, so
+    # check with pd.isna/pd.notna rather than plain truthiness (NaN is truthy).
+    dois_by_idx = defaultdict(list)
+    malformed, unmatched = [], []
+    for name, raw, doi in zip(form["Name"], form["Figshare DOI"], form["DOI"]):
+        if pd.isna(doi):
+            malformed.append((name, raw))
             continue
-        idx = matches[0]
+        idx = idx_by_key.get(match_key(name))
+        if idx is None:
+            unmatched.append((name, doi))
+            continue
+        dois_by_idx[idx].append(doi)
+
+    filled, skipped_existing = [], []
+    for idx, dois in dois_by_idx.items():
+        name = table.at[idx, "name"]
         if table.at[idx, "doi"]:
             skipped_existing.append(name)
             continue
-        table.at[idx, "doi"] = doi
+        # Repeat/duplicate form submissions of the same poster (e.g. a
+        # respondent resubmitting with the DOI in a different format)
+        # shouldn't produce a repeated link — dedupe, preserving order.
+        deduped = list(dict.fromkeys(dois))
+        table.at[idx, "doi"] = "; ".join(deduped)
         filled.append(name)
 
-    return table, filled, skipped_existing, unmatched
+    return table, filled, skipped_existing, unmatched, malformed
 
 
 if __name__ == "__main__":
-    table, filled, skipped_existing, unmatched = fill_doi()
+    table, filled, skipped_existing, unmatched, malformed = fill_doi()
     table.to_csv(ASSIGNMENTS_CSV, index=False)
 
     print(f"Filled {len(filled)} DOI value(s):")
@@ -84,9 +101,14 @@ if __name__ == "__main__":
         for name in skipped_existing:
             print(f"  {name}")
 
+    if malformed:
+        print(f"\nWARNING: {len(malformed)} form response(s) had a Figshare DOI that could not be parsed (expected something containing 10.xxxx/...):")
+        for name, raw in malformed:
+            print(f"  {name}: {raw!r}")
+
     if unmatched:
         print(f"\nWARNING: {len(unmatched)} name(s) from the form had no match in assignments.csv:")
-        for name in unmatched:
-            print(f"  {name}")
+        for name, doi in unmatched:
+            print(f"  {name}: {doi}")
 
     print(f"\nWrote {ASSIGNMENTS_CSV}")
