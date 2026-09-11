@@ -131,19 +131,19 @@ params:
             time: "8:45am"
         - name: "Dr. Irina Dolinskaya"
           photo: "/img/speakers/irina-dolinskaya.jpg"
-          bio: "Irina Dolinskaya is the Directorate Head for the Directorate for Computer and Information Science and Engineering (CISE). Prior to becoming the Directorate Head, she was the Deputy Division Director in the Division of Computing and Communication Foundations in CISE; and was a Program Director in the Division of Civil, Mechanical & Manufacturing Innovation (CMMI) in the Directorate for Engineering (ENG). Dr. Dolinskaya serviced Dynamics, Control and Systems Diagnostics (DCSD) and Foundational Research in Robotics (FRR) programs, as well as National Robotics Initiative (NRI 3.0) and Navigating the New Arctic (NNA) NSF's 10 Big Ideas. Prior to joining NSF, Dr. Dolinskaya was a faculty member in the Industrial Engineering and Management Sciences department at Northwestern University. She obtained M.S. and Ph.D. degrees in Industrial and Operations Engineering from the University of Michigan, and B.S. degree in Industrial Engineering from the University of Florida."
+          bio: "Irina Dolinskaya, Ph.D., is directorate head for the U.S National Science Foundation Computer and Information Science and Engineering (NSF CISE) Directorate at the U.S. National Science Foundation (NSF). Prior to becoming a directorate head, she served as a deputy division director in NSF’s Computing and Communication Foundations division, and as program director in NSF’s Division of Civil, Mechanical & Manufacturing Innovation. Prior to joining NSF, Irina Dolinskaya was a faculty in the Industrial Engineering and Management Sciences department at Northwestern University. She obtained M.S. and Ph.D. degrees in Industrial and Operations Engineering from the University of Michigan, and a B.S. degree in Industrial Engineering from the University of Florida."
           company: "National Science Foundation"
           link:
             href: "https://www.linkedin.com/in/irina-dolinskaya-a777627/"
             text: "(LinkedIn)"
           presentation:
-            title: "TBA"
-            description: "Grand Ballroom (Salon E). TBA"
+            title: "CISE updates and strategic directions"
+            description: "Grand Ballroom (Salon E). Leadership from the NSF CISE directorate will discuss major updates and priority directions for the directorate."
             time: "9:00am"
             co_presenters: ["Dr. Amy Walton"]
         - name: "Dr. Amy Walton"
-          photo: ""
-          bio: "Amy Walton is the Deputy Directorate Head for the Directorate for Computer and Information Science and Engineering (CISE). Prior to her current role, she was a Program Director in the Office of Advanced Cyberinfrastructure, contributing to several cross-foundational activities in which NSF has a leadership role: harnessing the Data Revolution, emphasizing data-intensive research in science and engineering; enabling Quantum Leap, through foundries for quantum materials science, engineering and information; Cyberinfrastructure for Sustained Scientific Innovation, focused upon the availability and interoperability of science data cyberinfrastructure; and EarthCube, an integrated geoscience research program."
+          photo: "/img/speakers/amy-walton.jpg"
+          bio: "Amy Walton is the Deputy Directorate Head for the Directorate for Computer and Information Science and Engineering (CISE). Prior to her current role, she was a Program Director in the Office of Advanced Cyberinfrastructure, contributing to several cross-foundational activities in which NSF has a leadership role: Harnessing the Data Revolution, emphasizing data-intensive research in science and engineering; enabling Quantum Leap, through foundries for quantum materials science, engineering and information; Cyberinfrastructure for Sustained Scientific Innovation, focused upon the availability and interoperability of science data cyberinfrastructure; and EarthCube, an integrated geoscience research program."
           company: "National Science Foundation"
           presentation:
             skip_program_row: true
