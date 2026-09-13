@@ -110,13 +110,13 @@ params:
   Days:
     - name: "Sunday, Sept. 13"
       schedule:
-        - name: "Welcome Reception"
-          description: "Please join us in Strathmore (lower level) for a welcome reception. Hors d'oeuvres will be served."
+        - name: "Welcome Reception & Badge Pick-up"
+          description: "Please join us in Strathmore (lower level) for a welcome reception. Hors d'oeuvres will be served. You can also pick up your badge or register."
           time: "5:00pm"
     - name: "Monday, Sept. 14"
       schedule:
-        - name: "Registration & Breakfast"
-          description: "Please join us in the Grand Ballroom (Salons F-H) to register and have breakfast."
+        - name: "Badge Pick-up & Breakfast"
+          description: "Please join us in the Grand Ballroom (Salons F-H) to pick up your badge and have breakfast. The welcome table will also be available for late registration."
           time: "7:45am"
         - name: "Prof. Neeraj Rai" 
           photo: "/img/speakers/neeraj-rai.jpg"
@@ -186,9 +186,9 @@ params:
 
     - name: "Tuesday, Sept. 15"
       schedule:
-        - name: "Registration & Breakfast"
+        - name: "Badge Pick-up & Breakfast"
           time: "8:00am"
-          description: "Please join us in the Grand Ballroom (Salons F-H) for breakfast. The registration table will still be available for late arrivals."
+          description: "Please join us in the Grand Ballroom (Salons F-H) for breakfast. The welcome table will still be available for badge pick-up and late registration."
         - name: "Dir. Katie Antypas"
           photo: "/img/speakers/katie-antypas.jpg"
           company: "National Science Foundation"
