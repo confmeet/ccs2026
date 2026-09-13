@@ -111,7 +111,7 @@ params:
     - name: "Sunday, Sept. 13"
       schedule:
         - name: "Welcome Reception & Badge Pick-up"
-          description: "Please join us in Salons F to H (main level) for a welcome reception. Hors d'oeuvres will be served. You can also pick up your badge or register."
+          description: "Please join us in the Grand Ballroom (Salons F-H) for a welcome reception. Hors d'oeuvres will be served. You can also pick up your badge or register."
           time: "5:00pm"
     - name: "Monday, Sept. 14"
       schedule:
