@@ -53,7 +53,7 @@ params:
     description: "Find your name below to see which breakout session and which poster session you have been assigned to, and whether we have received the DOI for your archived poster."
     empty: "Assignments are not yet available. Please check back closer to the meeting."
     missing_doi_text: "MISSING. Please complete this form to submit your DOI."
-    updated: "September 10, 2026"
+    updated: "September 15, 2026"
 
   # About section body (supports Markdown)
   About:
