@@ -8,7 +8,7 @@ disableKinds:
   - term
 
 params:
-  Name: "2026 NSF CSSI / Cyber Training / SCIPE PI Meeting"
+  Name: "2026 NSF CSSI / Cyber Training / SCIPE PI Meeting (Concluded)"
   Description: "Annual PI meeting for the NSF CSSI, CyberTraining, and SCIPE programs."
   Date: "Sept. 13 - 15, 2026"
   Venue: "Bethesda North Marriott Hotel & Conference Center"
@@ -22,7 +22,6 @@ params:
     - about
     - speakers
     - schedule
-    - registration
     - posters
     - location
 
@@ -32,7 +31,7 @@ params:
     schedule: "Program"
     registration: "Registration"
     posters: "Posters"
-    location: "Venue & Travel"
+    location: "Venue"
 
   CallToAction:
     text: "Feedback Form"
@@ -49,7 +48,7 @@ params:
   Assignments:
     title: "Session Assignments"
     csv: "data/assignments.csv"
-    link_text: "View My Assignments"
+    link_text: "Digital Poster Links"
     description: "Find your name below to see which breakout session and which poster session you have been assigned to, and whether we have received the DOI for your archived poster."
     empty: "Assignments are not yet available. Please check back closer to the meeting."
     missing_doi_text: "MISSING. Please complete this form to submit your DOI."
@@ -128,6 +127,7 @@ params:
             title: "Opening Remarks"
             description: "Prof. Rai will deliver opening remarks in the Grand Ballroom (Salon E)."
             time: "8:45am"
+            slides: "/slides/rai-slides.pdf"
         - name: "Dr. Irina Dolinskaya"
           photo: "/img/speakers/irina-dolinskaya.jpg"
           bio: "Irina Dolinskaya, Ph.D., is directorate head for the U.S National Science Foundation Computer and Information Science and Engineering (NSF CISE) Directorate at the U.S. National Science Foundation (NSF). Prior to becoming a directorate head, she served as a deputy division director in NSF’s Computing and Communication Foundations division, and as program director in NSF’s Division of Civil, Mechanical & Manufacturing Innovation. Prior to joining NSF, Irina Dolinskaya was a faculty in the Industrial Engineering and Management Sciences department at Northwestern University. She obtained M.S. and Ph.D. degrees in Industrial and Operations Engineering from the University of Michigan, and a B.S. degree in Industrial Engineering from the University of Florida."
@@ -140,6 +140,7 @@ params:
             description: "Grand Ballroom (Salon E). Leadership from the NSF CISE directorate will discuss major updates and priority directions for the directorate."
             time: "9:00am"
             co_presenters: ["Dr. Amy Walton"]
+            slides: "/slides/dolinskaya-slides.pdf"
         - name: "Dr. Amy Walton"
           photo: "/img/speakers/amy-walton.jpg"
           bio: "Amy Walton is the Deputy Directorate Head for the Directorate for Computer and Information Science and Engineering (CISE). Prior to her current role, she was a Program Director in the Office of Advanced Cyberinfrastructure, contributing to several cross-foundational activities in which NSF has a leadership role: Harnessing the Data Revolution, emphasizing data-intensive research in science and engineering; enabling Quantum Leap, through foundries for quantum materials science, engineering and information; Cyberinfrastructure for Sustained Scientific Innovation, focused upon the availability and interoperability of science data cyberinfrastructure; and EarthCube, an integrated geoscience research program."
@@ -157,6 +158,7 @@ params:
             title: "An Update on the Genesis Mission Platform"
             description: "Grand Ballroom (Salon E).  Since the Administration announced the Genesis Mission in November 2025, the DOE Office of Science Advanced Scientific Computing Research (ASCR) program has advanced the strategy and implementation approach to the Genesis Mission Platform: the federated computing, data, and networking infrastructure that will enable integrated AI workflows.  This presentation will provide a status update on these efforts, and specifically address our ambitions for the Genesis Platform in the contexts of AI, HPC, and Quantum Information Science."
             time: "9:30am"
+            slides: "/slides/brown-slides.pdf"
         - name: "Break"
           time: "10:00am"
         - name: "Poster Session I" 
@@ -209,10 +211,12 @@ params:
           presentation: 
             title: "Applications of Quantum Computers in Chemistry" 
             description: "Grand Ballroom (Salon E). Computing hardware has long followed Moore’s Law; however, its steady gains in computational performance are expected to plateau in the coming years. As a result, the computer hardware industry is actively exploring new paradigms to sustain performance growth. Quantum computing offers a promising pathway, though current quantum hardware remains limited by significant noise, necessitating effective error mitigation strategies. Recently, IBM introduced subspace quantum diagonalization (SQD), a method for solving electronic structure problems relevant to chemistry. SQD exemplifies the emerging paradigm of quantum-centric supercomputing (QCSC), in which quantum processors are deployed for targeted subproblems while classical hardware manages the remaining computational workload. In this presentation, I will review the theoretical foundations of the SQD method and highlight its applications in chemistry, including the study of intermolecular interactions, calculations on large drug-like molecules and biomolecules, the incorporation of solvation effects, and the integration of SQD with statistical mechanical approaches."
-            time: "9:30am" 
+            time: "9:30am"
+            slides: "/slides/merz-slides.pdf"
         - name: "Breakout Reports"
           time: "10:00am"
           description: "Grand Ballroom (Salon E). Speakers from each breakout section will report on their respective sessions and findings."
+          slides: "/slides/report-outs.pdf"
         - name: "Poster Session IV"
           time: "11:00am" 
           description: "Grand Ballroom (Salons A-D). Check your assignments to see if you are presenting."

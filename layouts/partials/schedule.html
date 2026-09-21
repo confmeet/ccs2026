@@ -27,6 +27,9 @@
                   {{ .presentation.title }} by {{ .name }}
                   {{ range .presentation.co_presenters }} and {{ . }}{{ end }}
                   <span class="speakers-company">{{ .company }}</span>
+                  {{ with .presentation.slides }}
+                    <br /><a href="{{ . }}" target="_blank">Slides (PDF)</a>
+                  {{ end }}
                 </td>
                 <td class="schedule-description">{{ .presentation.description }}</td>
               </tr>
@@ -37,7 +40,12 @@
             {{ $isAssigned := or (in $n "breakout") (in $n "poster") }}
             <tr class="schedule-other">
               <td class="schedule-time">{{ .time }}</td>
-              <td class="schedule-slot">{{ .name }}</td>
+              <td class="schedule-slot">
+                {{ .name }}
+                {{ with .slides }}
+                  <br /><br /><a href="{{ . }}" target="_blank">Slides (PDF)</a>
+                {{ end }}
+              </td>
               <td class="schedule-description">
                 {{ with .description }}{{ . }}{{ else }}{{ if not $isAssigned }}-{{ end }}{{ end }}
                 {{ if $isAssigned }}
