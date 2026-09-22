@@ -1,0 +1,36 @@
+<h2 class="section-title">{{ .titles.reports }}</h2>
+
+{{ with .reports }}
+  {{ with .body }}
+    <p>{{ . | markdownify }}</p>
+  {{ end }}
+
+  {{ with .items }}
+  <div class="schedule-tbl reports-tbl">
+    <table>
+      <thead>
+        <tr>
+          <th class="reports-year">Year</th>
+          <th class="reports-author">Authors</th>
+          <th class="reports-link">Report</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $item := . }}
+        <tr>
+          <td class="reports-year">{{ $item.year }}</td>
+          <td class="reports-author">{{ $item.author }}</td>
+          <td class="reports-link">
+            {{ with $item.link }}
+              <a href="{{ . }}" target="_blank">{{ with $item.display }}{{ . }}{{ else }}Link{{ end }}</a>
+            {{ else }}
+              {{ with $item.display }}{{ . }}{{ else }}-{{ end }}
+            {{ end }}
+          </td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+  {{ end }}
+{{ end }}

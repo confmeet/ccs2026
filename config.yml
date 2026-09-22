@@ -20,6 +20,7 @@ params:
 
   Sections:
     - about
+    - reports
     - speakers
     - schedule
     - posters
@@ -28,6 +29,7 @@ params:
   Titles:
     about: "About"
     speakers: "Speakers"
+    reports: "Reports"
     schedule: "Program"
     registration: "Registration"
     posters: "Posters"
@@ -58,6 +60,38 @@ params:
   About:
     body: |
       The annual NSF CSSI, CyberTraining, and SCIPE PI Meeting brings together principal investigators and senior personnel funded under these programs to share progress, exchange ideas, and build community across the cyberinfrastructure research ecosystem.
+  
+  # Reports section body 
+  Reports:
+    body:
+    items:
+      - year: "2026"
+        author: "N. Rai, A. Sussman, et al." 
+        display: "Coming Soon"
+      - year: "2025"
+        author: "V. Patel, N. Rai, et al."
+        link: "https://doi.org/10.5281/zenodo.18700481"
+        display: "DOI"
+      - year: "2024"
+        author: "A. Patra, M. Thomas, et al."
+        link: "https://doi.org/10.48550/arXiv.2507.04171"
+        display: "DOI"
+      - year: "2023"
+        author: "G. Fox, M. Thomas, et al."
+        link: "https://doi.org/10.48550/arXiv.2312.14199"
+        display: "DOI"
+      - year: "2023"
+        author: "C. Kirkpatrick, et al."
+        link: "/reports/2023_CSSI_Report.pdf"
+        display: "PDF"
+      - year: "2020"
+        author: "H. Shen, C. Song, et al."
+        link: "/reports/2020_CSSI_Report.pdf"
+        display: "PDF"
+      - year: "2019"
+        author: "R. Arora, X. Li, et al."
+        link: "/reports/2019_CSSI_Report.pdf"
+        display: "PDF"
 
   # Registration details
   Registration:
