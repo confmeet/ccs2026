@@ -235,6 +235,7 @@ params:
             title: "Update from the NSF Office of Advanced Cyberinfrastructure"
             time: "9:00am"
             description: "Grand ballroom (Salon E). In this talk Dir. Antypas will highlight new programs and recent awards relevant to the Cyberinfrastructure community."
+            slides: "/slides/antypas-slides.pdf"
         - name: "Prof. Kenneth Merz"
           photo: "/img/speakers/kenneth-merz.jpg"
           company: "Cleveland Clinic"
